@@ -212,28 +212,34 @@ $(document).ready(_ => {
 			});
 
 			$($(".about-certificate a")[idx]).hover(_ => {
-				container
-					.css({
-						width: 0,
-						height: pgUnit * 22.5
-					})
-					.animate({width: pgWidth / 2.5}, certTransTime, _ => {
-						container.animate({
-							width: pgWidth / 2.5,
-							height: height
-						}, certTransTime, function() {
-							$(this).css({
+				if (!container.hasClass("transitioning")) {
+					container
+						.stop()
+						.addClass("transitioning")
+						.css({
+							width: 0,
+							height: pgUnit * 22.5
+						})
+						.animate({width: pgWidth / 2.5}, certTransTime, _ => {
+							container.animate({
 								width: pgWidth / 2.5,
 								height: height
+							}, certTransTime, function() {
+								$(this).css({
+									width: pgWidth / 2.5,
+									height: height
+								});
 							});
 						});
-					});
+				}
 			}, _ => {
 				container.animate({height: pgUnit * 22.5}, certTransTime * 2 / 5, _ => {
 					container.animate({
 						width: 0,
 						height: pgUnit * 22.5
-					}, certTransTime * 2 / 5);
+					}, certTransTime * 2 / 5, function() {
+						$(this).removeClass("transitioning");
+					});
 				});
 			});
 		});
