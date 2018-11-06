@@ -246,13 +246,13 @@ ul {
 }
 
 .about-section {
-	width: 60%;
+	width: 59.9%;
 	height: 50%
 }
 
 .about-next,
 .about-prev {
-	width: 40%;
+	width: 40.1%;
 	height: 50%;
 	cursor: pointer;
 	background-color: #212529;
