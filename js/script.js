@@ -976,14 +976,30 @@ $(document).ready(_ => {
 	}
 
 	/**
+	 *	Scales window accordingly
+	 */
+	const scaleWindow = _ => {
+		updateDims();
+		setPgs();
+		setCertificateHover();
+	}
+
+	/**
 	 *	Handles resizing of the window to update all website elements and attributes
 	 *		Certificate event handlers must be turned off to avoid duplicate listens
 	 */
 	const resizeWindow = _ => {
-		$(window).resize(function() {
-			updateDims();
-			setPgs();
-			setCertificateHover();
+		$(window).resize(_ => {
+			scaleWindow();
+		});
+	}
+
+	/**
+	 *	Handles mobile orientation changes
+	 */
+	const orientWindow = _ => {
+		$(window).on("orientationchange", _ => {
+			scaleWindow();
 		});
 	}
 
@@ -1002,5 +1018,6 @@ $(document).ready(_ => {
 	setBioMouseMove();
 	setArrs();
 	resizeWindow();
+	orientWindow();
 
 });
