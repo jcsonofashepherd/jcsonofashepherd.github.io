@@ -193,7 +193,7 @@ a:hover {
 	border-radius: 0 0 30% 30%;
 	opacity: 0;
 	transition: all 0.1s ease-in-out;
-	content: attr(data-years);
+	content: attr(data-level);
 }
 
 .home-tools i.hover::after {
