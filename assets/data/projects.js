@@ -8,7 +8,7 @@ const projects = [
 		"tools": "WordPress, JS, CSS",
 		"website": "http://luminweddings.com/",
 		"repo": "",
-		"desc": "overhauled entire website design, layout, and behavior with code injections"
+		"desc": "increased client traffic by deploying a customized about page for listing concise personnel information, a listing of wedding projects robustly made to dynamically add future wedding entries, an info page with a designed and animated (expandable and collapsible) FAQ table, and a contact page with a bespoke form table designed to send responses to WordPress"
 	},
 	{
 		"type": "COMMISSIONED WEBSITE",
@@ -18,7 +18,7 @@ const projects = [
 		"tools": "Squarespace, JS, CSS",
 		"website": "https://www.laopendoor.church/",
 		"repo": "",
-		"desc": "created new overall site layout and site functionalities on archived pages"
+		"desc": "assisted church members and visitors by creating a minimalistic home page built to dynamically display new announcements and sermons and sermon page with a dynamically-implemented and search-enabled categorization system to easily and quickly post sermons to the website, and by minimizing unnecessary web routes and information by excising out-of-date pages and content"
 	},
 	{
 		"type": "COMMISSIONED WEBSITE",
@@ -28,7 +28,7 @@ const projects = [
 		"tools": "WordPress, JS, CSS, PHP",
 		"website": "http://www.donnahyulee.com/",
 		"repo": "",
-		"desc": "redesigned site homepage and added layout and forms on pages"
+		"desc": "improved user experience by implementing a home page equipped with a dynamic and auto-animated banner carousel, a post page template for ease in navigation of previous and next post pages, and a contact page with a bespoke form table designed to send responses to site owner email"
 	},
 
 	/**	Front-End Web Dev Projects */

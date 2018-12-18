@@ -343,10 +343,6 @@ $(document).ready(_ => {
 			pgWidth = 800;
 			pgHeight = 450;
 		}
-		else if (wHeight >= 806) {
-			pgWidth = 750 * 16 / 9;
-			pgHeight = 750;
-		}
 		else {
 			pgWidth = (wHeight - 56) * 16 / 9;
 			pgHeight =  wHeight - 56.4;
