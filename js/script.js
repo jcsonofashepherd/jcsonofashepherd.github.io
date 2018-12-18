@@ -41,7 +41,7 @@ $(document).ready(_ => {
 	 *	Shows image thumbnails if thumbnails are not already visible
 	 */
 	const showThumbs = _ => {
-		showInfo(projects[0]);
+		/*showInfo(projects[0]);*/
 
 		$(".active-project .project-image-container").addClass("hover-blackout");
 
@@ -75,7 +75,7 @@ $(document).ready(_ => {
 			$("#project-display").append(
 				'<div class="project-information ' + firstProject +'" data-index="' + i + '">' +
 					'<div class="project-header-container">' +
-						'<div class="project-header"></div>' +
+						'<div class="project-header">' + info.type +'</div>' +
 					'</div>' +
 
 					'<div class="project-image-container">' +
@@ -86,9 +86,9 @@ $(document).ready(_ => {
 
 					'<div class="project-description-container">' +
 						'<div class="project-description">' +
-							'<div class="project-name"></div>' +
+							'<div class="project-name">' + info.name +'</div>' +
 
-							'<div class="project-tools"></div>' +
+							'<div class="project-tools">' + info.tools +'</div>' +
 
 							'<div class="project-site">' +
 								'<a href="' + info.website + '" target="_blank"></a>' +
@@ -97,7 +97,7 @@ $(document).ready(_ => {
 							descRepo +
 
 							'<br>' +
-							'<div class="project-desc"></div>' +
+							'<div class="project-desc">' + info.desc + '</div>' +
 						'</div>' +
 					'</div>' +
 				'</div>'
@@ -108,6 +108,7 @@ $(document).ready(_ => {
 	/**
 	 *	Types project info onto the project slide
 	 */
+	/*
 	const animateInfo = (el, arr) => {
 		for (let i = 0; i < arr.length; i++) {
 			$(".active-project " + el).append('<span style="opacity: 0">' + arr[i] + '</span>');
@@ -119,10 +120,12 @@ $(document).ready(_ => {
 			}, idx * projTransTime / arr.length);
 		});
 	}
+	*/
 
 	/**
 	 *	Appends project info onto the project slide
 	 */
+	/*
 	const showInfo = info => {
 		let typeArr = info.type.split(""),
 				nameArr = info.name.split(""),
@@ -135,7 +138,7 @@ $(document).ready(_ => {
 		animateInfo(".project-site a", "WEBSITE".split(""));
 		animateInfo(".project-repo a", "REPOSITORY".split(""));
 		animateInfo(".project-desc", descArr);
-	}
+	}*/
 
 	/**
 	 *	Removes project info from the project slide fading out
@@ -874,12 +877,14 @@ $(document).ready(_ => {
 			opacity: 1
 		};
 
+		/*
 		deleteInfo(".project-header");
 		deleteInfo(".project-name");
 		deleteInfo(".project-tools");
 		deleteInfo(".project-site a");
 		deleteInfo(".project-repo a");
 		deleteInfo(".project-desc");
+		*/
 
 		currHover.removeClass("hover-blackout");
 		nextHover.addClass("hover-blackout");
@@ -900,7 +905,7 @@ $(document).ready(_ => {
 					.animate(projectFadeOutAnimate, projTransTime, _ =>
 						$("#project-display").removeClass("transitioning"));
 
-				showInfo(info);
+				/*showInfo(info);*/
 
 				$(this).dequeue();
 			});
