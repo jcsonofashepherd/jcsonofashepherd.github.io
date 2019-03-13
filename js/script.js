@@ -1,3 +1,7 @@
+$.getJSON("./assets/data.json", data => {
+  console.log(data);
+});
+
 /**
   *   Global variables pertaining to browser window, page structure, and page attributes
   */
