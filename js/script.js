@@ -1,6 +1,24 @@
-$.getJSON("./assets/data.json", data => {
-  console.log(data);
+function loadJSON(cb){
+  const req = new XMLHttpRequest();
+  req.open('GET', 'js/yourjson.json', true);
+  req.onreadystatechange = function () {
+      if (req.readyState === 4 && req.status === 200) {
+        const type = req.getResponseHeader('Content-Type');
+          try {
+            cb(JSON.parse(request.responseText);
+          }
+          catch(err) {
+            cb(err);
+          }
+      }
+  }
+  req.send(null);
+}
+
+loadJSON(function(obj) {
+  console.log(obj);
 });
+
 
 /**
   *   Global variables pertaining to browser window, page structure, and page attributes
