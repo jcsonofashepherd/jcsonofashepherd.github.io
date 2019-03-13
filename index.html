@@ -19,19 +19,17 @@
     <script>
       function downloadJSAtOnload() {
         let element = document.createElement("script");
+
         element.src = "./js/script.js";
         document.body.appendChild(element);
       }
 
-      if (window.addEventListener) {
+      if (window.addEventListener)
         window.addEventListener("load", downloadJSAtOnload, false);
-      }
-      else if (window.attachEvent) {
+      else if (window.attachEvent)
         window.attachEvent("onload", downloadJSAtOnload);
-      }
-      else {
+      else
         window.onload = downloadJSAtOnload;
-      }
     </script>
   </head>
 
@@ -55,16 +53,14 @@
             <div class="home-bio-image-container left">
               <img class="home-bio-image" src="./assets/images/bio.jpg"/>
             </div>
+
             <div class="home-bio-text right"><div class="right">BIO</div>Insight.<br>Initiative.<br>Ingenuity.<br>Innovation.<br><br>I have at least<br>one of these things.<br><br>Seriously though, I am<br>confident that my experiences as<br>an engineer have honed my problem-<br>solving skills to adequately strive towards<br>implementing fast and novel programming solutions.<br><br><br><div style="text-align: center">John Casabar, UC San Diego 2018 Alumnus</div></div>
           </div>
 
           <div class="home-name left">John C.<br>Casabar</div>
-
           <div class="home-side-right right text-right">
             <div class="home-header-top">Full-Stack</div>
-
             <div class="home-header-bottom">Web Dev</div>
-
             <div class="home-resume">
               <a href="./assets/Resume_John_Casabar.pdf" target="_blank">RESUME</a>
             </div>
@@ -73,7 +69,6 @@
 
         <div class="home-section home-lang left">
           <div class="home-subheader">LANGUAGES</div>
-
           <div class="home-tools">
             <i data-level="PROFICIENT" class="devicon-html5-plain-wordmark"></i>
             <i data-level="PROFICIENT" class="devicon-css3-plain-wordmark"></i>
@@ -85,10 +80,8 @@
         </div>
 
         <div class="home-next right text-right"></div>
-
         <div class="home-section home-tech">
           <div class="home-subheader">TECHNOLOGIES</div>
-
           <div class="home-tools">
             <i data-level="COMPETENT" class="devicon-sass-original"></i>
             <i data-level="COMPETENT" class="devicon-bootstrap-plain-wordmark"></i>
@@ -131,23 +124,17 @@
           <div class="about-header">EDUCATION</div>
           <div class="about-listing about-immediate">University of California, San Diego</div>
           <div class="about-description">B.S. Bioengineering: Bioengineering (ABET), 2018</div>
-
           <div class="about-listing">Coursera (in Partnership with UCSD)</div>
           <div class="about-description">Object-Oriented Programming in Java</div>
-
           <div class="about-listing">FreeCodeCamp</div>
           <div class="about-description">Full-Stack Development, Front-End Libraries</div>
         </div>
 
         <div class="about-next right text-right"></div>
-
         <div style="clear: both"></div>
-
         <div class="about-prev left"></div>
-
         <div class="about-section right">
           <div class="about-padding"></div>
-
           <div class="about-listing about-corner text-right">
             <div class="about-certificate">
               <a href="https://www.freecodecamp.org/certification/jcsonofashepherd/legacy-front-end" target="_blank">Front-End Web Development (2017)</a>
@@ -217,7 +204,6 @@
       <div id="Project" class="page-frame">
         <div class="page-container">
           <div class="project-section left"></div>
-
           <div id="project-display" class="project-section right"></div>
         </div>
       </div>
