@@ -15,10 +15,17 @@ function loadJSON(cb){
   req.send(null);
 }
 
-loadJSON(function(obj) {
-  console.log(obj);
-});
+function initData() {
+  return loadJSON(function(obj) {
+    return obj;
+  });
+}
 
+const data = initData();
+
+console.log(data);
+console.log(data.certificates);
+console.log(data.projects);
 
 /**
   *   Global variables pertaining to browser window, page structure, and page attributes
