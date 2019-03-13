@@ -1,7 +1,9 @@
 /**
   *   Global variables pertaining to browser window, page structure, and page attributes
   */
-let pgWidth,
+let certificates = data.certificates,
+    projects = data.projects,
+    pgWidth,
     pgHeight,
     wWidth,
     wHeight,
