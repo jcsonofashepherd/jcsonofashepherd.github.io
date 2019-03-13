@@ -1,5 +1,9 @@
-function loadJSON(cb){
+/**
+  *   Loads JSON file from assets
+  */
+function loadJSON(cb) {
   const req = new XMLHttpRequest();
+  req.overrideMimeType("application/json");
   req.open('GET', './assets/data.json', true);
   req.onreadystatechange = function() {
     if (req.readyState === 4 && req.status === 200)
@@ -8,16 +12,16 @@ function loadJSON(cb){
   req.send(null);
 }
 
+/**
+  *   Global variables pertaining to browser window, page structure, and page attributes
+  */
 loadJSON(function(data) {
-  /**
-    *   Global variables pertaining to browser window, page structure, and page attributes
-    */
   let certificates = data.certificates,
       projects = data.projects,
+      wWidth = window.innerWidth,
+      wHeight = window.innerHeight,
       pgWidth,
       pgHeight,
-      wWidth,
-      wHeight,
       bodyPadding,
       relBaseUnit = 900,
       pgUnit,
@@ -354,9 +358,6 @@ loadJSON(function(data) {
     *   Updates global variables as a result of window dimensions
     */
   function updateDims() {
-    wWidth = window.innerWidth;
-    wHeight = window.innerHeight;
-
     if (wHeight <= 506) {
       pgWidth = 800;
       pgHeight = 450;
