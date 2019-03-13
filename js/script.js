@@ -18,8 +18,8 @@ function loadJSON(cb) {
 loadJSON(function(data) {
   let certificates = data.certificates,
       projects = data.projects,
-      wWidth = window.innerWidth,
-      wHeight = window.innerHeight,
+      wWidth,
+      wHeight,
       pgWidth,
       pgHeight,
       bodyPadding,
@@ -358,6 +358,9 @@ loadJSON(function(data) {
     *   Updates global variables as a result of window dimensions
     */
   function updateDims() {
+    wWidth = window.innerWidth;
+    wHeight = window.innerHeight;
+
     if (wHeight <= 506) {
       pgWidth = 800;
       pgHeight = 450;
