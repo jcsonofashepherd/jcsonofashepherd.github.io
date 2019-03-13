@@ -1,32 +1,3 @@
-function loadJSON(cb){
-  const req = new XMLHttpRequest();
-  req.open('GET', './assets/data.json', true);
-  req.onreadystatechange = function() {
-      if (req.readyState === 4 && req.status === 200) {
-        const type = req.getResponseHeader('Content-Type');
-          try {
-            cb(JSON.parse(req.responseText));
-          }
-          catch(err) {
-            cb(err);
-          }
-      }
-  }
-  req.send(null);
-}
-
-function initData() {
-  return loadJSON(function(obj) {
-    return obj;
-  });
-}
-
-const data = initData();
-
-console.log(data);
-console.log(data.certificates);
-console.log(data.projects);
-
 /**
   *   Global variables pertaining to browser window, page structure, and page attributes
   */
