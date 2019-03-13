@@ -5,7 +5,7 @@ function loadJSON(cb){
       if (req.readyState === 4 && req.status === 200) {
         const type = req.getResponseHeader('Content-Type');
           try {
-            cb(JSON.parse(request.responseText);
+            cb(JSON.parse(request.responseText));
           }
           catch(err) {
             cb(err);
