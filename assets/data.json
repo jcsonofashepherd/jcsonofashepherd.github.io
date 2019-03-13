@@ -19,7 +19,7 @@
     {
       "name": "Data Structures & Performance [in Java]",
       "content": "After completing this course, one is able to...<br><ul><li>Describe the difference between an abstract data type (ADT) and its implementation.</li><li>Work with Java's built-in classes for fundamental data structures including: String, LinkedList, TreeSet, HashSet, and HashMap.</li><li>Implement fundamental data structures from scratch including Linked Lists and Tries.</li><li>Analyze the performance of code, using Big-O notation as well as through benchmarking experiments.</li><li>Compare and contrast the performance of different data structures to select the most appropriate structure for a task.</li><li>Write JUnit tests to ensure the correctness of code.</li><li>Implement several algorithms for generating and processing text.</li></ul>"
-    },
+    }
   ],
   "projects": [
   	{
@@ -143,5 +143,4 @@
   		"desc": "d3 app that displays global map containing meteor strikes with respective radii and information "
   	}
   ]
-
 }
