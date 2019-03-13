@@ -1,6 +1,6 @@
 function loadJSON(cb){
   const req = new XMLHttpRequest();
-  req.open('GET', 'js/yourjson.json', true);
+  req.open('GET', './assets/data.json', true);
   req.onreadystatechange = function () {
       if (req.readyState === 4 && req.status === 200) {
         const type = req.getResponseHeader('Content-Type');
